@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/LoginContainer/Login";
 import SignUp from "./components/SignupContainer/Signup";
+import Donation from "./components/DonateContainer/Donation";
+import Game from "./components/GameContainer/Game";
+import PlayerStats from "./components/PlayerStatsContainer/PlayerStats";
 
 function App() {
   return (<Router>
@@ -20,6 +23,15 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to={"/sign-up"}>Sign Up</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/donation"}>Donate</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/game"}>Game</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/player-stats"}>PlayerStats</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -31,6 +43,9 @@ function App() {
             <Route exact path='/' component={Login} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/donation" component={Donation} />
+            <Route path="/game" component={Game} />
+            <Route path="/player-stats" component={PlayerStats} />
           </Switch>
         </div>
       </div>
